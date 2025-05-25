@@ -9,14 +9,14 @@ int main() {
     const unsigned n = std::size(numbers);
 
     std::cout << "Чётные числа:\n";
-    std::vector<int> even_values = filter([](int x){ return x % 2 == 0; }, numbers, n);
+    std::vector<int> even_values = filter<int>([](int x){ return x % 2 == 0; }, numbers, n);
 
     for (const int &element : even_values) {
         std::cout << element << '\t';
     }
 
     std::cout << "\nПоложительные числа:\n";
-    std::vector<int> absolute_values = filter([](int a){ return a > 0; }, numbers, n);
+    std::vector<int> absolute_values = filter<int>([](int a){ return a > 0; }, numbers, n);
 
     for (const int &element : absolute_values) {
         std::cout << element << '\t';
