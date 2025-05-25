@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> filter(bool(*)(int), int[], unsigned);
+std::vector<int> filter(bool(*)(int), const int[], const unsigned);
 
 int main() {
     int numbers[] = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
@@ -13,17 +13,18 @@ int main() {
     for (const int &element : even_values) {
         std::cout << element << '\t';
     }
-    
+
     std::cout << "\nПоложительные числа:\n";
     std::vector<int> absolute_values = filter([](int a){ return a > 0; }, numbers, n);
 
     for (const int &element : absolute_values) {
         std::cout << element << '\t';
     }
+    
     return 0;
 }
 
-std::vector<int> filter(bool(*func)(int), int array[], unsigned length) {
+std::vector<int> filter(bool(*func)(int), const int array[], const unsigned length) {
     std::vector<int> filtered_array;
 
     for (int i = 0; i < length; ++i) {
