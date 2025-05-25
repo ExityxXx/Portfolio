@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> filter(bool(*)(int), const int[], const unsigned);
+std::vector<int> filter(bool(*func)(int), const int array[], const unsigned &length);
 
 int main() {
     int numbers[] = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
@@ -24,7 +24,7 @@ int main() {
     return 0;
 }
 
-std::vector<int> filter(bool(*func)(int), const int array[], const unsigned length) {
+std::vector<int> filter(bool(*func)(int), const int array[], const unsigned &length) {
     std::vector<int> filtered_array;
 
     for (int i = 0; i < length; ++i) {
