@@ -19,10 +19,11 @@ std::string reversed_string(std::string original)
     return original;
 };
 
+// The main() function has a simple interactive interface for easy use of the program.
 int main(void)
 {
     std::cout << "Enter the string for reverse this string...\n";
-    // The main() function has a simple interactive interface for easy use of the program.
+    
   
     while (true)
     {
