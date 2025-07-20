@@ -1,4 +1,5 @@
 ### Результат выполнения программы:
+***
 ```bash
 Text Analizer. Enter input string and enter '.' for terminate input.
 The beauty of nature is truly awe-inspiring from towering mountains and lush forests to sparkling rivers and
@@ -13,3 +14,4 @@ nature can bring peace and inspiration to our daily lives
 2 puncts.
 0 others.
 ```
+***
